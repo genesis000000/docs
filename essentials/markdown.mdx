@@ -1,88 +1,40 @@
----
-title: 'Markdown Syntax'
-description: 'Text, title, and styling in standard markdown'
-icon: 'text-size'
----
+## Holographic Interference Patterns
 
-## Titles
+The holographic projection process will initiate from the wacth. 
 
-Best used for section headers.
+- The Gerchberg-Saxton algorithm is employed to calculate the holographic interference patterns based on the received environment data. The algorithm repeatedly adjusts the phase distribution on the MEMs within the AR glasses to match the intensity distribution in the image planes.
 
-```md
-## Titles
-```
+<CardGroup cols={2}>
+  <Card
+    title="Fourier Transform Algorithms"
+    icon="palette"
+    href="https://mintlify.com/docs/settings/global"
+  >
+    This algorithm decomposes a holographic image into its spatial frequency components. The interference pattern required to reconstruct the image is then calculated based on these frequency components.
+  </Card>
+  <Card
+    title=" Gerchberg-Saxton Algorithm"
+    icon="code"
+    href="https://mintlify.com/docs/api-playground/openapi"
+  >
+    This is an iterative algorithm, commonly used for phase retrieval and it’s pretty fast too.
+  </Card>
+</CardGroup>
 
-### Subtitles
+## Real-time Adjustment Based on Environmental 
 
-Best use to subsection headers.
+Whatever algorithm we use takes into account environmental cues captured by the smartwatch, such as changes in lighting conditions or object movement. The holographic projection adapts in real-time to changes in the environment to ensure coherence of the holographic image.
 
-```md
-### Subtitles
-```
+**Display of Holographic Projection:**
 
-<Tip>
+- Once the holographic interference patterns are calculated, they are displayed on the SLM (edit: changed to MEMs).
 
-Each **title** and **subtitle** creates an anchor and also shows up on the table of contents on the right.
+- The interference patterns interact with the incoming light to produce a three-dimensional holographic image
 
-</Tip>
+**Components for modulating light:**
 
-## Text Formatting
+- Phase-only SLM: Expensive, accurate modulators (grayscale phase patterns), bulky.
 
-We support most markdown formatting. Simply add `**`, `_`, or `~` around text to format it.
+- DMD: Cheap, small form factors, low light efficiency (because using the diffraction lights), (binary phase patterns → may need to change the phase retrieval algorithm to take into account) 
 
-| Style         | How to write it   | Result          |
-| ------------- | ----------------- | --------------- |
-| Bold          | `**bold**`        | **bold**        |
-| Italic        | `_italic_`        | _italic_        |
-| Strikethrough | `~strikethrough~` | ~strikethrough~ |
-
-You can combine these. For example, write `**_bold and italic_**` to get **_bold and italic_** text.
-
-You need to use HTML to write superscript and subscript text. That is, add `<sup>` or `<sub>` around your text.
-
-| Text Size   | How to write it          | Result                 |
-| ----------- | ------------------------ | ---------------------- |
-| Superscript | `<sup>superscript</sup>` | <sup>superscript</sup> |
-| Subscript   | `<sub>subscript</sub>`   | <sub>subscript</sub>   |
-
-## Linking to Pages
-
-You can add a link by wrapping text in `[]()`. You would write `[link to google](https://google.com)` to [link to google](https://google.com).
-
-Links to pages in your docs need to be root-relative. Basically, you should include the entire folder path. For example, `[link to text](/writing-content/text)` links to the page "Text" in our components section.
-
-Relative links like `[link to text](../text)` will open slower because we cannot optimize them as easily.
-
-## Blockquotes
-
-### Singleline
-
-To create a blockquote, add a `>` in front of a paragraph.
-
-> Dorothy followed her through many of the beautiful rooms in her castle.
-
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
-```
-
-### Multiline
-
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-```
-
-### LaTeX
-
-Mintlify supports [LaTeX](https://www.latex-project.org) through the Latex component.
-
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-
-```md
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-```
+- MEMS: Totally different, for projectors and laser scanning systems.  Not holography technology. High light efficiency and also very compact (~2 mm diameter).
