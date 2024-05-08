@@ -52,8 +52,8 @@
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
-        "quickstart",
+        "Home",
+        "Data synchronization",
         "development"
       ]
     },
