@@ -1,37 +1,22 @@
 ---
-title: 'Code Blocks'
-description: 'Display inline code and code blocks'
+title: 'Real-time Adjustment Based on Environment'
+description: 'A LIDAR Scan will be utilized to scan the environment and send it to the AR Glasses'
 icon: 'code'
 ---
 
-## Basic
+Whatever algorithm we use takes into account environmental cues captured by the smartwatch, such as changes in lighting conditions or object movement. The holographic projection adapts in real-time to changes in the environment to ensure coherence of the holographic image.
 
-### Inline Code
 
-To denote a `word` or `phrase` as code, enclose it in backticks (`).
+**Display of Holographic Projection:**
 
-```
-To denote a `word` or `phrase` as code, enclose it in backticks (`).
-```
+- Once the holographic interference patterns are calculated, they are displayed using MEMs/DMDs.
 
-### Code Block
+- The interference patterns interact with the incoming light to produce a three-dimensional holographic image.
 
-Use [fenced code blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) by enclosing code in three backticks and follow the leading ticks with the programming language of your snippet to get syntax highlighting. Optionally, you can also write the name of your code after the programming language.
+**Components for modulating light:**
 
-```java HelloWorld.java
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-```
+- DMD: Cheap, small form factors, low light efficiency (because using the diffraction lights), (binary phase patterns → may need to change the phase retrieval algorithm to take into account) 
 
-````md
-```java HelloWorld.java
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-```
-````
+- MEMS: Totally different, for projectors and laser scanning systems.  Not holography technology. High light efficiency and also very compact (~2 mm diameter).
+
+
