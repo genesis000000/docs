@@ -10,34 +10,43 @@ icon: 'image'
 - Use of technologies like structured light (infrared projector and camera) or time-of-flight sensors.
 
 - The depth-sensing camera system should have a wide field of view to capture the user's full body and surroundings.
- - Intel RealSense, Azure Kinect, or custom made systems using ToF sensors like from pmdtechnologies.
+ + Intel RealSense, Azure Kinect, or custom made systems using ToF sensors like from pmdtechnologies.
 
-High-Resolution RGB Camera:
-The watch should have a high-resolution RGB camera to capture detailed color and texture.
-Have a high frame rate (e.g., 60 FPS or higher) for smooth motion capture and minimal latency.
-Resolution should be at least 1080p or higher for capturing fine details and textures. (Though this is not a priority now)
-Examples: Manufacturers from like Sony or OmniVision
+**High-Resolution RGB Camera:**
 
-Powerful Embedded Processor:
-Need a processor to handle the computationally intensive tasks of depth and color data processing and 3D reconstruction
-Examples: Qualcomm Snapdragon or Samsung Exynos series that are designed for mobile devices
+- The watch should have a high-resolution RGB camera to capture detailed color and texture.
 
-Edit: We can explore using embedded SoCs specifically designed for computer vision and AI applications, such as those from Jetson series or Google’s Coral.
+- Have a high frame rate (e.g., 60 FPS or higher) for smooth motion capture and minimal latency.
 
-ISP (Image Signal Processor):
-An ISP can offload some of the image processing tasks from the main CPU
+- Resolution should be at least 1080p or higher for capturing fine details and textures. (Though this is not a priority now)
++ Manufacturers from like Sony or OmniVision
+
+**Powerful Embedded Processor:**
+
+- Need a processor to handle the computationally intensive tasks of depth and color data processing and 3D reconstruction
+
+- Qualcomm Snapdragon or Samsung Exynos series that are designed for mobile devices
+
+**ISP (Image Signal Processor):**
+
+- An ISP can offload some of the image processing tasks from the main CPU
 Use of Integrated ISPs optimized for computer vision and image processing tasks.
 
-High Bandwidth Connection:
-The watch will need to transmit a significant amount of data (depth, color, and potentially processed 3D data) to the AR glasses and central AR system in real-time.
-High bandwidth options like Wi-Fi 6 or 5G can work I believe but it  depends
-Perhaps low-latency wireless technologies like 60GHz mmWave for minimal latency for the transmission of the holographic data.
+**High Bandwidth Connection:**
 
-Cooling System:
-Intensive data transmission is probably going to generate significant heat, which will affect performance and battery life.
-We need an efficient cooling system, such as heat pipes or liquid cooling
+- The watch will need to transmit a significant amount of data (depth, color, and potentially processed 3D data) to the AR glasses and central AR system in real-time.
 
-Battery:
+
+- Perhaps low-latency wireless technologies like 60GHz mmWave for minimal latency for the transmission of the holographic data.
+
+**Cooling System:**
+
+- Intensive data transmission is probably going to generate significant heat, which will affect performance and battery life.
++ We need an efficient cooling system, such as liquid cooling or openings.
+
+**Battery:**
+
 The amount of data we have will drain the battery quickly.
-Will consider using a high-capacity battery or wireless charging.
+
+- Will consider using a high-capacity battery or wireless charging.
 
