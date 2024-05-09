@@ -1,110 +1,60 @@
 ---
-title: Reusable Snippets
-description: Reusable, custom snippets to keep content in sync
-icon: 'recycle'
+title: AR Glasses
 ---
 
-import SnippetIntro from '/snippets/snippet-intro.mdx';
 
-<SnippetIntro />
 
-## Creating a custom snippet
+Headset: 100% easier to make but uncomfortable, not convenient at all to just answer a call and put a huge headset on. Looking into different options, since a minimalistic design of the AR glasses is proven challenging.
 
-**Pre-condition**: You must create your snippet file in the `snippets` directory.
+Display Technology:
+Waveguide-based optics or like OLED microdisplays integrated into the lenses or lens housings
+High resolution and wide field of view (ideally close to human vision)
+Stereoscopic 3D rendering for accurate depth perception
 
-<Note>
-  Any page in the `snippets` directory will be treated as a snippet and will not
-  be rendered into a standalone page. If you want to create a standalone page
-  from the snippet, import the snippet into another file and call it as a
-  component.
-</Note>
+Computing Platform:
+Processors or SoC solutions with dedicated GPU capabilities
+Integrated into the frame 
 
-### Default export
+Examples: Qualcomm Snapdragon XR platforms, NVIDIA Jetson modules, or custom ASICs
 
-1. Add content to your snippet file that you want to re-use across multiple
-   locations. Optionally, you can add variables that can be filled in via props
-   when you import the snippet.
+Sensors and Tracking:
+Inertial measurement units and cameras for head tracking and positional tracking
+Infrared sensors for gesture recognition and hologram control
+6 degrees of freedom for positional tracking and head tracking
+Integrated into arms of the glasses
 
-```mdx snippets/my-snippet.mdx
-Hello world! This is my content I want to reuse across pages. My keyword of the
-day is {word}.
-```
+Design:
+Lightweight and comfortable materials like carbon fiber
+Balanced weight distribution 
 
-<Warning>
-  The content that you want to reuse must be inside the `snippets` directory in
-  order for the import to work.
-</Warning>
 
-2. Import the snippet into your destination file.
+The Structure of the Glasses
 
-```mdx destination-file.mdx
----
-title: My title
-description: My Description
----
+In the Lenses:
+Waveguide-based optics 
 
-import MySnippet from '/snippets/path/to/my-snippet.mdx';
 
-## Header
 
-Lorem impsum dolor sit amet.
+Frame:
+Front section - Depth cameras or infrared sensors for gesture recognition and hologram control
+Temple arms:
+ IMUs and cameras 
 
-<MySnippet word="bananas" />
-```
+Top or side sections: 
+Wireless connectivity
 
-### Reusable variables
+Temple Arms or Hinges:
+Will accommodate the computing platform, including processors, memory modules (RAM and storage) and wireless communication modules 
 
-1. Export a variable from your snippet file:
+Battery and Cooling System:
+Batteries or wireless power receivers could be integrated into the temple arms or frame
+Placed near the computing platform and other heat-generating components
 
-```mdx snippets/path/to/custom-variables.mdx
-export const myName = 'my name';
+Audio System:
+Compact speakers or bone conduction audio drivers could be integrated into the temple arms for audio output
 
-export const myObject = { fruit: 'strawberries' };
-```
+Input Controls:
+Physical buttons or touch-sensitive surfaces could be incorporated for user input and control (though not a priority now)
 
-2. Import the snippet from your destination file and use the variable:
 
-```mdx destination-file.mdx
----
-title: My title
-description: My Description
----
 
-import { myName, myObject } from '/snippets/path/to/custom-variables.mdx';
-
-Hello, my name is {myName} and I like {myObject.fruit}.
-```
-
-### Reusable components
-
-1. Inside your snippet file, create a component that takes in props by exporting
-   your component in the form of an arrow function.
-
-```mdx snippets/custom-component.mdx
-export const MyComponent = ({ title }) => (
-  <div>
-    <h1>{title}</h1>
-    <p>... snippet content ...</p>
-  </div>
-);
-```
-
-<Warning>
-  MDX does not compile inside the body of an arrow function. Stick to HTML
-  syntax when you can or use a default export if you need to use MDX.
-</Warning>
-
-2. Import the snippet into your destination file and pass in the props
-
-```mdx destination-file.mdx
----
-title: My title
-description: My Description
----
-
-import { MyComponent } from '/snippets/custom-component.mdx';
-
-Lorem ipsum dolor sit amet.
-
-<MyComponent title={'Custom title'} />
-```
