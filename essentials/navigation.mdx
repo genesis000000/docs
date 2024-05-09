@@ -1,66 +1,32 @@
 ---
-title: 'Navigation'
-description: 'The navigation field in mint.json defines the pages that go in the navigation menu'
-icon: 'map'
+title: 'Softwares'
 ---
 
-The navigation menu is the list of links on every website.
 
-You will likely update `mint.json` every time you add a new page. Pages do not show up automatically.
+AliceVision's Meshroom software for environmental capture. `currently testing in different lighting and environments using the camera on my phone`
 
-## Navigation syntax
+AliceVision is a Photogrammetric Computer Vision Framework which provides 3D Reconstruction and Camera Tracking algorithms. AliceVision comes up with strong software basis and state-of-the-art computer vision algorithms that can be tested, analyzed and reused. The project is a result of collaboration between academia and industry to provide cutting-edge algorithms with the robustness and the quality required for production usage. `according to their manual`
 
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
+**Environmental Data Capture:**
 
-<CodeGroup>
+- The depth-sensing cameras and RGB cameras on the smartwatch would capture a series of images or video frames of the user's environment from multiple angles 
 
-```json Regular Navigation
-"navigation": [
-    {
-        "group": "Getting Started",
-        "pages": ["quickstart"]
-    }
-]
-```
+- This captured data would be processed by Meshroom to generate a detailed 3D reconstruction of the environment.
 
-```json Nested Navigation
-"navigation": [
-    {
-        "group": "Getting Started",
-        "pages": [
-            "quickstart",
-            {
-                "group": "Nested Reference Pages",
-                "pages": ["nested-reference-page"]
-            }
-        ]
-    }
-]
-```
+**3D Reconstruction:**
 
-</CodeGroup>
+- Meshroom uses Structure from Motion and Multi-View Stereo algorithms to reconstruct 3D geometry from the captured image or video data. 
 
-## Folders
+- The software can detect and match features across multiple images and generate meshes and textured 3D models of the environment.
 
-Simply put your MDX files in folders and update the paths in `mint.json`.
+**Holographic Rendering:**
 
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
+- This 3D environment can be integrated with the holographic rendering pipeline on the smartwatch or central server.
 
-<Warning>
+- This environmental data can be used to accurately position and render the holographic representation of the user within the captured environment.
 
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
+**Real-time Updates and Optimization:**
 
-</Warning>
+- We are optimizing their code to have faster processing and updates as the user's environment changes.
 
-```json Navigation With Folder
-"navigation": [
-    {
-        "group": "Group Name",
-        "pages": ["your-folder/your-page"]
-    }
-]
-```
-
-## Hidden Pages
-
-MDX files not included in `mint.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
+- Maybe GPUs or offloading computationally intensive tasks to a central server or cloud infrastructure.
